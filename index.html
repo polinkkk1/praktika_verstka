@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XNAILS — Студии маникюра в Санкт-Петербурге</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=300;400;500;600&family=Playfair+Display:ital,wght=0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+
+    <header class="header sticky-top py-3">
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+            <div class="container">
+                <a href="#" class="logo d-flex flex-column text-decoration-none">
+                    <span class="logo__main text-dark fw-bold lh-1">XNAILS</span>
+                    <span class="logo__sub text-secondary text-uppercase" style="font-size: 10px; letter-spacing: 1px;">студия маникюра</span>
+                </a>
+                
+                <button class="navbar-toggler border-0 shadow-none" type="button" id="customBurgerBtn" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="mainMenu">
+                    <ul class="navbar-nav mx-auto gap-4">
+                        <li class="nav-item"><a href="#about" class="nav-link text-dark small custom-nav-link">О нас</a></li>
+                        <li class="nav-item"><a href="#services" class="nav-link text-dark small custom-nav-link">Прайс</a></li>
+                        <li class="nav-item"><a href="#portfolio" class="nav-link text-dark small custom-nav-link">Отзывы</a></li>
+                        <li class="nav-item"><a href="#studios" class="nav-link text-dark small custom-nav-link">Студии</a></li>
+                        <li class="nav-item"><a href="#footer" class="nav-link text-dark small custom-nav-link">Блог</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-4 header-actions">
+                        <a href="tel:+78126605088" class="header__phone text-dark text-decoration-none small fw-medium">+7 (812) 660-50-88</a>
+                        <button class="btn btn-outline-dark rounded-0 px-4 py-2 btn-sm text-uppercase fw-medium" data-bs-toggle="modal" data-bs-target="#modalOrder">Записаться</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero py-5 position-relative overflow-hidden" id="about">
+        <div class="glow-blur position-absolute translate-middle" style="top: 20%; left: 10%;"></div>
+        <div class="glow-blur position-absolute translate-middle" style="top: 70%; left: 90%;"></div>
+        
+        <div class="container position-relative z-1">
+            <p class="text-muted small mb-3">XNAILS - студии маникюра в Санкт-Петербурге</p>
+            <div class="row g-4 align-items-center">
+                <div class="col-12 col-lg-6">
+                    <h1 class="hero-title mb-4">Мы знаем все о КРАСИВОМ и КАЧЕСТВЕННОМ покрытие</h1>
+                    <div class="d-flex align-items-center gap-4 mb-5">
+                        <button class="btn btn-dark rounded-0 px-4 py-2 text-uppercase" data-bs-toggle="modal" data-bs-target="#modalOrder">Записаться</button>
+                        <a href="#services" class="text-dark text-decoration-underline small">Узнать стоимость</a>
+                    </div>
+                    <div class="d-flex gap-3 mt-4">
+                        <img src="images/1.png" alt="Брови" class="preview-thumb">
+                        <img src="images/2.png" alt="Маникюр" class="preview-thumb rounded-0">
+                        <img src="images/3.png" alt="Педикюр" class="preview-thumb">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 d-flex justify-content-center">
+                    <div class="hero-main-oval" style="background-image: url('images/main.png');"></div>
+                </div>
+            </div>
+
+            <div class="row text-center mt-5 pt-5 g-4 border-top">
+                <div class="col-4">
+                    <div class="metric-num">4</div>
+                    <div class="metric-text">года мы радуем<br>наших клиентов</div>
+                </div>
+                <div class="col-4">
+                    <div class="metric-num">10 000+</div>
+                    <div class="metric-text">маникюров мы сделали<br>за последний год</div>
+                </div>
+                <div class="col-4">
+                    <div class="metric-num">3+</div>
+                    <div class="metric-text">наши мастера имеют<br>опыт более 3 лет</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="promo-slider py-5">
+        <div class="container">
+            <div id="carouselPromo" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="promo-banner-card card border-0 overflow-hidden bg-light position-relative">
+                            <div class="row g-0 align-items-center h-100">
+                                <div class="col-md-6 h-100">
+                                    <div class="promo-img-box" style="background-image: url('images/free.png');"></div>
+                                </div>
+                                <div class="col-md-6 p-4 p-md-5">
+                                    <h3 class="promo-card-title mb-3">Вместе дешевле!</h3>
+                                    <p class="small text-secondary mb-4 lh-lg">Расскажите о нас своим подругам, знакомым, коллегам или родственникам.<br>Друг получает скидку 10% на первый визит, а Вы - 10% кэшбэк с его первого визита</p>
+                                    <a href="#" class="text-dark text-decoration-underline small fw-medium">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services py-5" id="services">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Наши услуги</h2>
+            <div class="row g-4 g-lg-5">
+                <div class="col-12 col-lg-7">
+                    <div class="d-flex gap-4 border-bottom pb-2 mb-4" id="servicesTabs">
+                        <button class="tab-trigger active-tab" data-cat="manicure">Маникюр</button>
+                        <button class="tab-trigger text-secondary" data-cat="extension">Наращивание</button>
+                        <button class="tab-trigger text-secondary" data-cat="pedicure">Педикюр</button>
+                        <button class="tab-trigger text-secondary" data-cat="brows">Брови</button>
+                    </div>
+                    <div id="priceList" class="mb-4"></div>
+                    <button class="btn btn-outline-dark rounded-0 px-4 py-2 mt-3 text-uppercase" data-bs-toggle="modal" data-bs-target="#modalOrder">Записаться</button>
+                </div>
+                <div class="col-12 col-lg-5 position-relative d-flex justify-content-center align-items-center mt-5 mt-lg-0">
+                    <div class="services-collage-wrapper">
+                        <div class="collage-oval-outline" style="background-image: url('images/ellipse.png');"></div>
+                        <div class="collage-rect-img" style="background-image: url('images/foto.png');"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio py-5" id="portfolio">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Портфолио</h2>
+            
+            <div class="portfolio-slider-container px-4">
+                <button class="portfolio-arrow arrow-prev" id="portPrev">←</button>
+                
+                <div class="portfolio-track-viewport overflow-hidden">
+                    <div class="portfolio-track d-flex gap-3" id="portTrack">
+                        <div class="portfolio-slide-item"><div class="p-img" style="background-image:url('images/1.1.png')"></div></div>
+                        <div class="portfolio-slide-item">
+                            <div class="p-card-instagram d-flex flex-column align-items-center justify-content-center text-center p-3">
+                                <div class="insta-oval-thumb mb-3" style="background-image: url('images/2.2.png');"></div>
+                                <p class="serif-text small mb-0">Больше работ можно найти в нашем <a href="#" class="text-dark text-decoration-underline fw-medium">Instagram</a></p>
+                            </div>
+                        </div>
+                        <div class="portfolio-slide-item"><div class="p-img" style="background-image:url('images/3.3.png')"></div></div>
+                        <div class="portfolio-slide-item"><div class="p-img" style="background-image:url('images/4.4.png')"></div></div>
+                    </div>
+                </div>
+                
+                <button class="portfolio-arrow arrow-next" id="portNext">→</button>
+            </div>
+            
+            <div class="d-flex justify-content-center gap-2 mt-4" id="portDots">
+                <span class="dot-indicator active"></span>
+                <span class="dot-indicator"></span>
+                <span class="dot-indicator"></span>
+                <span class="dot-indicator"></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="gift py-5">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-12 col-md-5 d-flex justify-content-center">
+                    <div class="gift-oval-frame">
+                        <div class="gift-oval-content" style="background-image: url('images/sertif.png');"></div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-7 ps-md-5">
+                    <h2 class="gift-title mb-4">Не знаете,<br>что подарить?</h2>
+                    <p class="text-secondary small mb-4 lh-lg">Подарочный сертификат – это приятный сюрприз для Ваших близких и идеальный подарок коллеге, который обязательно порадует и подарит массу положительных эмоций!<br>Вы можете оформить как сертификат на бумажном носителе, так и в электронном виде.</p>
+                    <div class="d-flex align-items-center gap-4">
+                        <button class="btn btn-outline-dark rounded-0 px-4 py-2 text-uppercase" data-bs-toggle="modal" data-bs-target="#modalOrder">Оформить</button>
+                        <a href="#" class="text-dark fw-medium text-decoration-underline small">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews py-5">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-12 col-lg-6 position-relative">
+                    <h2 class="reviews-title mb-5">Мы заботимся<br>о наших клиентах<br><span class="fst-italic text-lowercase ps-md-5" style="font-family: var(--font-serif);">и они это ценят</span></h2>
+                    
+                    <div class="review-wrapper ps-4 mt-4 position-relative">
+                        <span class="quote-mark">“</span>
+                        <div id="reviewBox"></div>
+                        <div class="d-flex gap-3 mt-4">
+                            <button class="custom-nav-arrow" id="revPrev">←</button>
+                            <button class="custom-nav-arrow" id="revNext">→</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 d-flex justify-content-center">
+                    <div class="reviews-side-img" style="background-image: url('images/proces.png');"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="studios py-5" id="studios">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Наши студии</h2>
+            <div class="d-flex justify-content-center gap-4 border-bottom pb-2 mb-5 mx-auto" style="max-width: 450px;">
+                <button class="studio-tab-trigger active-tab" data-studio="center">Xnails Центр</button>
+                <button class="studio-tab-trigger text-secondary" data-studio="petro">Xnails Петроградка</button>
+            </div>
+            
+            <div class="row g-4 align-items-stretch">
+                <div class="col-12 col-lg-6">
+                    <div id="ymapContainer" class="w-100 h-100 border" style="min-height: 380px; background-color: #f5f5f5;"></div>
+                </div>
+                <div class="col-12 col-lg-6 ps-lg-5 d-flex flex-column justify-content-between">
+                    <div id="studioDetails"></div>
+                    <div class="mt-4">
+                        <button class="btn btn-outline-dark rounded-0 px-5 py-2 text-uppercase" data-bs-toggle="modal" data-bs-target="#modalOrder">Записаться</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer py-5 border-top bg-white" id="footer">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-12 col-md-4">
+                    <span class="fw-bold text-dark fs-4 d-block mb-1">XNAILS</span>
+                    <span class="text-secondary small d-block mb-4" style="font-size: 11px; letter-spacing: 1px;">СТУДИЯ МАНИКЮРА</span>
+                    
+                    <div class="footer-socials d-flex gap-3 fs-5">
+                        <a href="#" class="text-dark footer-icon-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-dark footer-icon-link" aria-label="VK"><i class="bi bi-vk"></i></a>
+                        <a href="#" class="text-dark footer-icon-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="mailto:info@xnails.ru" class="text-dark footer-icon-link" aria-label="Email"><i class="bi bi-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 d-flex flex-column gap-2 pt-2">
+                    <a href="#about" class="text-secondary small text-decoration-none">О нас</a>
+                    <a href="#portfolio" class="text-secondary small text-decoration-none">Портфолио</a>
+                    <a href="#portfolio" class="text-secondary small text-decoration-none">Отзывы</a>
+                    <a href="#" class="text-secondary small text-decoration-none">Политика конфиденциальности</a>
+                </div>
+                <div class="col-6 col-md-2 d-flex flex-column gap-2 pt-2">
+                    <a href="#" class="text-secondary small text-decoration-none">Акции</a>
+                    <a href="#" class="text-secondary small text-decoration-none">Блог</a>
+                    <a href="#services" class="text-secondary small text-decoration-none">Прайс</a>
+                    <a href="#studios" class="text-secondary small text-decoration-none">Студии</a>
+                </div>
+                <div class="col-12 col-md-3">
+                    <h4 class="footer-form-title mb-3">Узнавайте первым о новых акциях!</h4>
+                    <form id="footerForm" onsubmit="return false;">
+                        <div class="d-flex border-bottom border-dark pb-2 mb-3">
+                            <input type="email" class="border-0 bg-transparent w-100 small shadow-none" placeholder="Ваш e-mail" required style="outline:none;">
+                            <button type="submit" class="border-0 bg-transparent">→</button>
+                        </div>
+                        <div class="form-check p-0 d-flex gap-2 align-items-start">
+                            <input class="form-check-input ms-0 mt-1 shadow-none border-dark" type="checkbox" id="checkAgree" checked required>
+                            <label class="form-check-label text-muted" style="font-size: 11px;" for="checkAgree">
+                                Я соглашаюсь с условиями <a href="#" class="text-decoration-underline text-muted">Политики конфиденциальности</a>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-md-row justify-content-between border-top pt-4 text-muted" style="font-size: 12px;">
+                <span>Design by @aleks_webdesign</span>
+                <span>© XNAILS 2021</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="modalOrder" tabindex="-1" aria-labelledby="modalOrderLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-0 border-dark bg-custom-main">
+                <div class="modal-header border-0 pb-0 justify-content-end">
+                    <button type="button" class="btn-close shadow-none fs-4 text-dark" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body px-4 pb-5 pt-0 text-center">
+                    <h3 class="modal-title fs-6 fw-bold text-uppercase mb-4 tracking-wider" id="modalOrderLabel">Онлайн-запись XNAILS</h3>
+                    <form class="modal-box__form" onsubmit="return false;">
+                        <input type="text" placeholder="Ваше имя" class="form-control rounded-0 border-secondary mb-3 py-2 px-3 shadow-none text-dark" required>
+                        <input type="tel" placeholder="Номер телефона" class="form-control rounded-0 border-secondary mb-4 py-2 px-3 shadow-none text-dark" required>
+                        <button type="submit" class="btn btn--dark w-100 py-2">ЗАПИСАТЬСЯ</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
