@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XNAILS — студии маникюра в Санкт-Петербурге</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght=0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="logo">
+                <span class="logo__main">XNAILS</span>
+                <span class="logo__sub">студия маникюра</span>
+            </a>
+
+            <button class="burger-menu" id="burgerToggle" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav" id="mobileNav">
+                <ul class="nav__list">
+                    <li><a href="#about" class="nav__link">О нас</a></li>
+                    <li><a href="#services" class="nav__link">Прайс</a></li>
+                    <li><a href="#portfolio" class="nav__link">Отзывы</a></li>
+                    <li><a href="#studios" class="nav__link">Студии</a></li>
+                    <li><a href="#footer" class="nav__link">Блог</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <a href="tel:+78126605088" class="header__phone">+7 (812) 660-50-88</a>
+                <button class="btn btn--outline" id="headerOrderBtn">Записаться</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="about">
+        <div class="glow-blur glow-blur--yellow" style="top: 10%; left: -5%;"></div>
+        <div class="glow-blur glow-blur--green" style="top: 60%; right: -5%;"></div>
+        
+        <div class="container hero__container">
+            <div class="hero__content">
+                <p class="hero__subtitle">XNAILS - студии маникюра в Санкт-Петербурге</p>
+                <h1 class="hero__title">Мы знаем все о КРАСИВОМ и КАЧЕСТВЕННОМ покрытие</h1>
+                
+                <div class="hero__btns">
+                    <button class="btn btn--dark" id="heroOrderBtn">Записаться</button>
+                    <a href="#services" class="hero__link-more">Узнать стоимость</a>
+                </div>
+
+                <div class="hero__thumbs">
+                    <img src="images/1.png" alt="Брови" class="hero__thumb-img">
+                    <img src="images/2.png" alt="Маникюр" class="hero__thumb-img hero__thumb-img--rect">
+                    <img src="images/3.png" alt="Педикюр" class="hero__thumb-img">
+                </div>
+            </div>
+
+            <div class="hero__visual">
+                <div class="hero__main-oval" style="background-image: url('images/main.png');"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="metrics">
+                <div class="metrics__item">
+                    <span class="metrics__num">4</span>
+                    <p class="metrics__text">года мы радуем<br>наших клиентов</p>
+                </div>
+                <div class="metrics__item">
+                    <span class="metrics__num">10 000+</span>
+                    <p class="metrics__text">маникюров мы сделали<br>за последний год</p>
+                </div>
+                <div class="metrics__item">
+                    <span class="metrics__num">3+</span>
+                    <p class="metrics__text">наши мастера имеют<br>опыт более 3 лет</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="promo">
+        <div class="container">
+            <div class="promo-banner" id="promoBanner">
+                <div class="promo-banner__image" id="promoImage" style="background-image: url('images/free.png');"></div>
+                <div class="promo-banner__content">
+                    <h2 class="promo-banner__title" id="promoTitle">Вместе дешевле!</h2>
+                    <p class="promo-banner__text" id="promoText">Расскажите о нас своим подругам, знакомым, коллегам или родственникам. Друг получает скидку 10% на первый визит, а Вы - 10% кэшбэк с его первого визита.</p>
+                    <a href="#" class="promo-banner__link">Подробнее</a>
+                </div>
+            </div>
+            <div class="promo__dots" id="promoDots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Наши услуги</h2>
+            
+            <div class="services__content-grid">
+                <div class="services__table-side">
+                    <div class="services__tabs" id="servicesTabs">
+                        <button class="services__tab-btn active" data-cat="manicure">Маникюр</button>
+                        <button class="services__tab-btn" data-cat="extension">Наращивание</button>
+                        <button class="services__tab-btn" data-cat="pedicure">Педикюр</button>
+                        <button class="services__tab-btn" data-cat="brows">Брови</button>
+                    </div>
+
+                    <div class="services__list" id="priceList">
+                        </div>
+
+                    <button class="btn btn--outline services__order-btn">Записаться</button>
+                </div>
+
+                <div class="services__visual-collage">
+                    <div class="collage-oval" style="background-image: url('images/ellipse.png');"></div>
+                    <div class="collage-rect" style="background-image: url('images/foto.png');"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">Портфолио</h2>
+            
+            <div class="portfolio__slider-wrapper">
+                <button class="portfolio__arrow portfolio__arrow--prev" id="portPrev">←</button>
+                
+                <div class="portfolio__viewport">
+                    <div class="portfolio__track" id="portTrack">
+                        <div class="portfolio__slide">
+                            <div class="portfolio__img" style="background-image: url('images/1.1.png');"></div>
+                        </div>
+                        <div class="portfolio__slide">
+                            <div class="portfolio__insta-card">
+                                <div class="portfolio__insta-oval" style="background-image: url('images/2.2.png');"></div>
+                                <p class="portfolio__insta-text">Больше работ можно найти в нашем <a href="#">Instagram</a></p>
+                            </div>
+                        </div>
+                        <div class="portfolio__slide">
+                            <div class="portfolio__img" style="background-image: url('images/3.3.png');"></div>
+                        </div>
+                        <div class="portfolio__slide">
+                            <div class="portfolio__img" style="background-image: url('images/4.4.png');"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="portfolio__arrow portfolio__arrow--next" id="portNext">→</button>
+            </div>
+
+            <div class="portfolio__dots" id="portDots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="gift">
+        <div class="container gift__container">
+            <div class="gift__visual">
+                <div class="gift__oval-frame">
+                    <div class="gift__oval-img" style="background-image: url('images/sertif.png');"></div>
+                </div>
+            </div>
+            <div class="gift__content">
+                <h2 class="gift__title">Не знаете,<br>что подарить?</h2>
+                <p class="gift__text">Подарочный сертификат – это приятный сюрприз для Ваших близких и идеальный подарок коллеге, который обязательно порадует и подарит массу положительных эмоций!<br><br>Вы можете оформить как сертификат на бумажном носителе, так и в электронном виде.</p>
+                <div class="gift__actions">
+                    <button class="btn btn--outline">Оформить</button>
+                    <a href="#" class="gift__link-more">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <div class="container reviews__container">
+            <div class="reviews__content">
+                <h2 class="reviews__title">Мы заботимся<br>о наших клиентах<br><span>и они это ценят</span></h2>
+                
+                <div class="reviews__box-wrapper">
+                    <span class="reviews__quote">“</span>
+                    <div id="reviewBox">
+                        </div>
+                    <div class="reviews__nav">
+                        <button class="reviews__arrow" id="revPrev">←</button>
+                        <button class="reviews__arrow" id="revNext">→</button>
+                    </div>
+                </div>
+            </div>
+            <div class="reviews__visual">
+                <div class="reviews__main-img" style="background-image: url('images/proces.png');"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="studios" id="studios">
+        <div class="container">
+            <h2 class="section-title">Наши студии</h2>
+            
+            <div class="studios__tabs" id="studioTabs">
+                <button class="studios__tab-btn active" data-studio="center">Xnails Центр</button>
+                <button class="studios__tab-btn" data-studio="petro">Xnails Петроградка</button>
+            </div>
+
+            <div class="studios__grid">
+                <div class="studios__map-side">
+                    <div id="ymapContainer" class="studios__map-canvas"></div>
+                </div>
+                <div class="studios__info-side">
+                    <div class="studios__info" id="studioInfoBlock">
+                        <p class="studios__desc" id="studioDesc">Наша студия находится в Центральном районе г. Санкт-Петербург, в 5 минутах ходьбы от станции метро.</p>
+                        <a href="tel:+79119246345" class="studios__phone" id="studioPhone">+7 (911) 924-63-45</a>
+                        <div class="studios__meta">
+                            <strong id="studioTitle">XNAILS Центр</strong>
+                            <p id="studioAddress">Гродненский переулок, д. 7<br>м. Чернышевская, г. Санкт-Петербург</p>
+                            <p id="studioHours">Пн. — Вс.: 10:00 — 22:00</p>
+                        </div>
+                    </div>
+                    <button class="btn btn--outline studios__order-btn">Записаться</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="footer">
+        <div class="container footer__grid">
+            <div class="footer__col-brand">
+                <span class="footer__logo-main">XNAILS</span>
+                <span class="footer__logo-sub">СТУДИЯ МАНИКЮРА</span>
+                
+                <div class="footer__socials">
+                    <a href="#" class="footer__social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="footer__social-link" aria-label="VK"><i class="bi bi-vk"></i></a>
+                    <a href="#" class="footer__social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="mailto:info@xnails.ru" class="footer__social-link" aria-label="Email"><i class="bi bi-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="footer__col-links">
+                <div class="footer__nav-wrapper">
+                    <div class="footer__nav-col">
+                        <a href="#about" class="footer__link">О нас</a>
+                        <a href="#portfolio" class="footer__link">Портфолио</a>
+                        <a href="#portfolio" class="footer__link">Отзывы</a>
+                        <a href="#" class="footer__link">Политика конфиденциальности</a>
+                    </div>
+                    <div class="footer__nav-col">
+                        <a href="#" class="footer__link">Акции</a>
+                        <a href="#" class="footer__link">Блог</a>
+                        <a href="#services" class="footer__link">Прайс</a>
+                        <a href="#studios" class="footer__link">Студии</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__col-form">
+                <h3 class="footer__subscribe-title">Узнавайте первым о новых акциях!</h3>
+                <form class="subscribe-form" onsubmit="return false;">
+                    <div class="subscribe-form__field">
+                        <input type="email" class="subscribe-form__input" placeholder="Ваш e-mail" required>
+                        <button type="submit" class="subscribe-form__submit-btn">→</button>
+                    </div>
+                    <label class="subscribe-form__checkbox-label">
+                        <input type="checkbox" required checked>
+                        <span>Я соглашаюсь с условиями <a href="#">Политики конфиденциальности</a></span>
+                    </label>
+                </form>
+            </div>
+        </div>
+        <div class="container footer__bottom">
+            <p>Design by @aleks_webdesign</p>
+            <p>© XNAILS 2021</p>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="modalOrder">
+        <div class="modal-box">
+            <button class="modal-box__close" id="modalClose">×</button>
+            <h3 class="modal-box__title">Онлайн-запись XNAILS</h3>
+            <form class="modal-box__form" onsubmit="return false;">
+                <input type="text" placeholder="Ваше имя" class="modal-box__input" required>
+                <input type="tel" placeholder="Номер телефона" class="modal-box__input" required>
+                <button type="submit" class="btn btn--dark modal-box__btn">ЗАПИСАТЬСЯ</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
